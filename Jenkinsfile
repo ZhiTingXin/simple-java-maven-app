@@ -10,6 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'pwd'
+                sh 'which java'
+                sh 'mvn -v'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
